@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'better_errors'
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Use mongoDB as the database for Active Record
-gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
+gem "mongoid", "~> 4.0.0"
 gem 'bson_ext'
 
 group :development, :test do
