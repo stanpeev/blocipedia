@@ -1,3 +1,102 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#background {
+background: #76839e; /* Old browsers */
+background: -moz-linear-gradient(top,  #76839e 0%, #23538a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#76839e), color-stop(100%,#23538a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #76839e 0%,#23538a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #76839e 0%,#23538a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #76839e 0%,#23538a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #76839e 0%,#23538a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76839e', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
+  height: auto;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  z-index: -100;
+  min-height: 100%;
+  min-width: 1040px;
+  width: 100%;
+}
+
+#landing h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: lighter;
+}
+
+div#signin-details.form-horizontal {
+  text-align: center;
+}
+
+#signin-details {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+ margin-right: auto;
+}
+
+#signin-details {
+  margin-top: 40px;
+}
+
+div#signin-btn.form-group {
+  .btn.btn-default {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border-width: 2px;
+  border-color: #fff;
+}
+.btn.btn-default:hover {
+  background-color: white;
+  color: #010101;
+}
+}
+
+.btn-primary a {
+  color: white;
+}
+
+.btn.btn-primary {
+  width: 33%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.divider {
+  margin-top: 0px;
+  width: 30%;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+.navbar-header {
+  margin-left: -115px;
+}
+
+div#forgot-password.form-group a {
+  color: white;
+  font-weight: lighter;
+}
+
+div#forgot-password.form-group a:hover {
+  color: white;
+}
+
+.alert-success {
+  border-radius: 0px;
+  margin-top: -20px;
+}
+
+.alert-warning {
+  border-radius: 0px;
+  margin-top: -20px;
+}
+
