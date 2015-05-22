@@ -1,26 +1,6 @@
 <div id="background"></div>
 <div class="container" id="landing">
 <h1>Welcome to Blocipedia</h1>
-  <div class="form-horizontal" id="signin-details">
-              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <%= devise_error_messages! %>
-                <div class="form-group" id="email-field">
-                  <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
-                </div>
-                <div class="form-group" id="password-field">
-                  <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
-                </div>
-                <div class="form-group" id="signin-btn">
-                  <%= f.submit "Sign in", class: 'btn btn-default' %>
-                    </div>
-        
-                  <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
 </div>
-
 
  

@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 # gem 'therubyracer', platforms: :ruby
 gem 'better_errors'
 gem 'devise'
+gem 'faker'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

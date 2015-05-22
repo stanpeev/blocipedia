@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+ resources :wikis
+
   get 'users/show'
 
   devise_for :users
