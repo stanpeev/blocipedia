@@ -16,6 +16,7 @@ gem 'better_errors'
 gem 'devise'
 gem 'faker'
 gem 'pundit'
+gem 'stripe'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

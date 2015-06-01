@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+  $("#signin-details").removeClass("hidden");
+  $("#signin-details").hide();
+  $("#signin-details").fadeIn(2);
+});

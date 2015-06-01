@@ -1,7 +1,7 @@
-<div id="background"></div>
+\<div id="background"></div>
 <div class="container" id="landing">
 <h1>Welcome to Blocipedia</h1>
-  <div class="form-horizontal" id="signin-details">
+  <div class="form-horizontal hidden" id="signin-details" >
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <%= devise_error_messages! %>
                 <div class="form-group" id="email-field">
