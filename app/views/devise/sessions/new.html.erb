@@ -13,7 +13,9 @@
                 <div class="form-group" id="signin-btn">
                   <%= f.submit "Sign in", class: 'btn btn-default' %>
                     </div>
-        
+                  <div id="user-links">
+                      <%= render "devise/shared/links" %>
+                  </div>
                   <% end %>
             </div>
           </div>

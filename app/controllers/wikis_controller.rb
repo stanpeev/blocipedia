@@ -25,4 +25,15 @@ class WikisController < ApplicationController
   def edit
     @wiki = Wiki.find(params[:id])
   end
+
+  def update
+    @wiki = Wiki.find(params[:id])
+    if @post.update_attributes(params.require(:wiki).permit(:title, :body))
+      flash[:notice] = "Wiki was updated successfully."
+      redirect_to @wiki
+    else
+      flash[:error] = "There was a problem updating your wiki. Please try again."
+      render :edit
+    end
+  end
 end
