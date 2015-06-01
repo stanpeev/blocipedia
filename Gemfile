@@ -15,7 +15,6 @@ gem 'bootstrap-sass'
 gem 'better_errors'
 gem 'devise'
 gem 'faker'
-gem 'figaro'
 gem 'pundit'
 
 # Use jquery as the JavaScript library

@@ -1,3 +1,5 @@
 <div class="container">
-  <h1>Hello <%= current_user.name %>!</h1>
+  <h1>Hello <%= current_user.name %>!</h1> 
+  <small>Account : <%= current_user.role %></small>
+    <%= render @user.wikis %>
 </div>
