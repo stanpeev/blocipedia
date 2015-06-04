@@ -17,6 +17,7 @@ gem 'devise'
 gem 'faker'
 gem 'pundit'
 gem 'stripe'
+gem 'redcarpet'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
