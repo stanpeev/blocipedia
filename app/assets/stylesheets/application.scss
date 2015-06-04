@@ -29,36 +29,36 @@
  .navbar-inverse {
   border-radius: 0;
   margin-bottom: 0px;
-  background-color: transparent;
+  background-color: white;
   border-color: transparent;
  }
 
  .navbar-inverse .navbar-nav > li > a {
-  color: #fff;
+  color: #23538a;
   font-weight: lighter;
  }
 
  #sign-up-btn {
   border-radius: 10px;
-  border-color: #fff;
+  border-color: #23538a;
   background-color: transparent;
  }
 
  #sign-up-btn a {
-    color: #fff;
+    color: #23538a;
     font-weight: lighter;
  }
 
   #sign-up-btn a:hover {
-    color: #76839e ;
+    color: #fff ;
     font-weight: lighter;
  }
 
  #sign-up-btn:hover {
   border-radius: 10px;
-  border-color: #fff;
-  background-color: #fff;
-  color: #000000;
+  border-color: #23538a;
+  background-color: #23538a;
+  color: #fff;
  }
 
  .alert {

@@ -19,5 +19,5 @@
 $(document).ready(function(){
   $("#signin-details").removeClass("hidden");
   $("#signin-details").hide();
-  $("#signin-details").fadeIn(2);
+  $("#signin-details").fadeIn();
 });

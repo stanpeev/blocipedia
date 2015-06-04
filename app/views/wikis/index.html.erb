@@ -4,6 +4,7 @@
     <%= link_to 'New Wiki', new_wiki_path, class: 'btn btn-success' %>
   <% end %>
   <% @wikis.each do |wiki| %>
+  <% if policy(wiki).show? %>
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
@@ -11,6 +12,7 @@
       </h4>
     </div>
   </div>
+   <% end %>
    <% end %>
 </div>
 
