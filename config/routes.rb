@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'collaborators/create'
+
+  get 'collaborators/destroy'
+
   get 'charges/create'
 
- resources :wikis
+ resources :wikis do
+    resources :collaborators, only: [:create, :destroy]
+ end
+
+
  resources :charges, only: [:new, :create]
 
   get 'users/show'

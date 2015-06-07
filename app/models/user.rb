@@ -2,7 +2,10 @@ class User
   include Mongoid::Document
   include Mongoid::Attributes::Dynamic
 
+  # wikis I created
   has_many :wikis
+
+  has_many :collaborators
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
