@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    - if flash[:notice]
+      .alert.alert-success
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash[:notice]
+    - elsif flash[:error]
+      .alert.alert-danger
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash[:error]
+    - elsif flash[:alert]
+      .alert.alert-warning
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash[:alert]
+    %title Blocipedia
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    %header.navbar.navbar-inverse
+      .container
+        %nav{:role => "navigation"}
+          / Brand and toggle get grouped for better mobile display
+          .navbar-header
+            %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          / Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li= link_to "Home", welcome_index_path
+              %li= link_to "Wikis", wikis_path
+              %li= link_to "About", welcome_about_path
+            %ul.navbar-right
+              - if current_user
+                Hello #{link_to (current_user.name || current_user.email), edit_user_registration_path}!
+                %button.btn.btn-outline-inverse.btn-xs{:type => "button"}= link_to "Sign out", destroy_user_session_path, method: :delete
+              - else
+                %button#sign-up-btn.btn.btn-outline-inverse.btn-xs{:type => "button"}= link_to "Sign In", new_user_session_path
+    = yield

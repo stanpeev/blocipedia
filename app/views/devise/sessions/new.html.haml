@@ -1,0 +1,17 @@
+#background
+#landing.container
+  %h1 Welcome to Blocipedia
+  #signin-details.form-horizontal.hidden
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = devise_error_messages!
+      #email-field.form-group
+        = f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email"
+      #password-field.form-group
+        = f.password_field :password, class: 'form-control', placeholder: "Enter password"
+      #signin-btn.form-group
+        = f.submit "Sign in", class: 'btn btn-default'
+      #user-links
+        = render "devise/shared/links"
+
+
+ 

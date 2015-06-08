@@ -1,0 +1,10 @@
+.container
+  %h1 All Wikis
+  - if policy(Wiki.new).create?
+    = link_to 'New Wiki', new_wiki_path, class: 'btn btn-success'
+  - @wikis.each do |wiki|
+    .media
+      .media-body
+        %h4.media-heading
+          = link_to wiki.title, wiki_path(wiki.id)
+

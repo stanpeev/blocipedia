@@ -2,7 +2,7 @@ class CollaboratorsController < ApplicationController
   before_action :set_wiki
 
   def create
-    @collaborator = Collaborator.new(wiki_id: @wiki.id, user_id: params[:user_id])
+    @collaborator = @wiki.collaborators.create(user_id: params[:user_id])
     if @collaborator.save
       flash[:notice] = "Your wiki was updated."
       redirect_to edit_wiki_path(@wiki)

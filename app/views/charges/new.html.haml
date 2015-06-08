@@ -1,0 +1,12 @@
+.container
+  - unless current_user.premium?
+    = form_tag charges_path do
+      %h1
+        %strong Upgrade to Premium!
+      %script.stripe-button{"data-amount" => "<haml_loud", "data-key" => @stripe_btn_data[:key], :src => "https://checkout.stripe.com/checkout.js"}
+        :cdata
+          @stripe_btn_data[:amount]
+  - else
+    %h3 Downgrade Account
+    %h5 Are you sure you want to lose premium acccess to Blocipedia?
+    = link_to "Yes, downgrade my account", downgrade_path, class: 'btn btn-warning'

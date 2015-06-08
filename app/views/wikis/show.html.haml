@@ -1,0 +1,9 @@
+.container
+  %h1= markdown_to_html @wiki.title
+  - if policy(@wiki).edit?
+    = link_to 'Edit Wiki', edit_wiki_path(@wiki.id), class: 'btn btn-success'
+  - if policy(@wiki).destroy?
+    = link_to 'Delete Wiki', @wiki, class: 'btn btn-danger',        |
+      method: :delete,                                              |
+      data: { confirm: 'Are you sure you want to delete your Wiki'} |
+  %p= markdown_to_html @wiki.body
