@@ -57,6 +57,10 @@ class User
     role == 'premium'
   end
 
+   def self.search(query)
+    where("name like ?", "%#{query}%") 
+  end
+
   private
 
    def user_params

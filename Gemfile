@@ -19,6 +19,7 @@ gem 'pundit'
 gem 'stripe'
 gem 'redcarpet'
 gem 'haml'
+gem 'mongoid_search'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

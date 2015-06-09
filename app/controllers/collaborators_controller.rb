@@ -1,11 +1,21 @@
 class CollaboratorsController < ApplicationController
   before_action :set_wiki
 
+  respond_to :html, :js
+
   def create
-    @collaborator = @wiki.collaborators.create(user_id: params[:user_id])
+    
+    user = User.where(name: params[:search]).first
+
+    @collaborator = @wiki.collaborators.create(user_id: user.id)
+
     if @collaborator.save
       flash[:notice] = "Your wiki was updated."
-      redirect_to edit_wiki_path(@wiki)
+
+      respond_with(@collaborator) do |format|
+        format.html { redirect_to edit_wiki_path(@wiki) }
+        format.js { render action: 'create' }
+      end
     else
       flash[:error] = "There was an error updating your wiki. Please try again."
       render :new

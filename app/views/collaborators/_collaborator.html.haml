@@ -1,0 +1,3 @@
+%td
+  = collaborator.user.name
+  = link_to "Remove Collaborator", wiki_collaborator_path(@wiki, @wiki.collaborator_for(collaborator.user)), method: :delete, class: 'btn btn-danger'
